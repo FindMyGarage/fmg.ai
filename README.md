@@ -54,7 +54,7 @@ The `check_consistency` function verifies whether the length of the provided tex
 
 The `capture_predict_and_call_api` function serves as the main loop of the application. It captures video frames from a source, potentially a webcam, utilizing the OpenCV library. Each frame is saved as an image file named "image.jpeg". The code attempts to extract the number plate from the captured image using the `get_plate()` function, which employs image processing techniques like Otsu thresholding and region labeling. The consistency of the detected number plate is then checked using the `check_consistency()` function.
 
-If the detected number plate is consistent or a failsafe condition (failsafe equals 3) is met, the code constructs a payload and sends a POST request to a specified API endpoint using the `requests` library. Based on the API response, the code prints messages indicating whether the car has successfully entered, exited, is already present, or if there is no corresponding booking found. The process runs in a continuous loop with a delay of 5 seconds between iterations.
+If the detected number plate is consistent or a failsafe condition (failsafe equals 3) is met, the code constructs a payload and sends a POST request to the (fmg.backend)[https://github.com/FindMyGarage/fmg.backend] API endpoint using the `requests` library. Based on the API response, the code prints messages indicating whether the car has successfully entered, exited, is already present, or if there is no corresponding booking found. The process runs in a continuous loop with a delay of 5 seconds between iterations.
 
 ## Models(tensorflow)
 
