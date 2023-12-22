@@ -22,7 +22,7 @@ def most_similar_plate(target_plate):
     '''
     function to extract the most similar number plate from mongoDB
     '''
-    client = pym.MongoClient("mongodb+srv://aryatito:Tito%40420@cluster0.5viwfw1.mongodb.net/?retryWrites=true&w=majority")
+    client = pym.MongoClient("mongodb+srv://aryatito:<password>0@cluster0.5viwfw1.mongodb.net/?retryWrites=true&w=majority")
     db = client["fmg_personal"]
     collection = db["car_data"]
     key_to_retrieve = "licenseId"
@@ -171,7 +171,7 @@ def capture_predict_and_call_api():
         plt.show()
 
         try:
-            prediction = get_plate("test_car_front.jpeg")
+            prediction = get_plate("image.jpeg")
             # print(prediction)
         except:
             prediction = ""
